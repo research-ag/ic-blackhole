@@ -1,9 +1,7 @@
 x-base-image:
   versions:
-    moc: &moc 0.13.5 
-    ic-wasm: &ic_wasm 0.9.1
-    mops: &mops 1.2.0
-  name: &base_name "ghcr.io/research-ag/motoko-build:moc-0.13.5"
+    moc: &moc 0.6.4 
+  name: &base_name "local/base"
 
 services:
   base:
@@ -12,8 +10,6 @@ services:
       dockerfile: Dockerfile.base
       args:
         MOC_VERSION: *moc
-        MOPS_VERSION: *mops
-        IC_WASM_VERSION: *ic_wasm
     image: *base_name
   wasm:
     build:
