@@ -1,6 +1,7 @@
 x-base-image:
   versions:
     moc: &moc 0.6.4 
+    binaryen: &binaryen 96 
   name: &base_name "local/base"
 
 services:
@@ -10,6 +11,7 @@ services:
       dockerfile: Dockerfile.base
       args:
         MOC_VERSION: *moc
+        BINARYEN_VERSION: *binaryen
     image: *base_name
   wasm:
     build:
