@@ -1,4 +1,4 @@
-# Reproducible builds template
+# Reproducible build of ninegua/ic-blackhole
 
 This repository is to reproduce the build of canister e3mmv-5qaaa-aaaah-aadma-cai with module hash `210cf941e5ca77daac314a91517483ac171264527e3d0d713b92bb95239d7de0`.
 The canister is known as the "ic-blackhole".
@@ -23,17 +23,6 @@ The output should be
 
 We need docker installed.
 
-On Mac, `colima` is required which can be installed from https://github.com/abiosoft/colima.
-It is important to start colima with the command:
-
-```
-colima start --arch x86_64
-```
-
-If colima had been started before without the `--arch` option then we must run
-
-```
-colima delete
-```
-first before starting it again.
-
+On Mac, it is recommended to install `colima` from https://github.com/abiosoft/colima.
+When using `colima` it is ok to use value `host` in the `--arch`.
+This is also the default so the `--arch` option can be omitted.
